@@ -24,7 +24,7 @@ git clone https://github.com/Arianna8317/final_attestation.git
 
 3. Создать директорию, переместить файл туда.
 
-<image src="images\image1.png" >
+<image src="images\image2.png" >
 
 
 
