@@ -167,6 +167,8 @@ CREATE TABLE IF NOT EXISTS dogs
  FOREIGN KEY (pet_id) REFERENCES pets (pet_id) 
 );
 
+
+
 INSERT INTO dogs (dog_name, birthday, command, pet_id)
 VALUES
 ('Барбос', '2020-11-10', 'Сидеть!', 2),
