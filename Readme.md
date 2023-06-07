@@ -198,4 +198,44 @@ SELECT * FROM horses
 UNION
 SELECT * FROM donkeys
 
+<image src="images\image5.png" >
+
+9. Создать новую таблицу “молодые животные” в которую попадут все животные старше 1 года, но младше 3 лет и в отдельном столбце с точностью до месяца подсчитать возраст животных в новой таблице
+
+<image src="images\image5.png" >
+
+10. Объединить все таблицы в одну, при этом сохраняя поля, указывающие на прошлую принадлежность к старым таблицам.
+```
+SELECT h.name, h.birthday, h.commands, p.animal_name, y.age_in_month 
+FROM horses h
+LEFT JOIN young_animals ya ON y.name = h.name
+LEFT JOIN pack_animals pa ON p.id = h.animal_id
+UNION 
+SELECT d.name, d.birthday, d.commands, p.animal_name, y.age_in_month 
+FROM donkeys d 
+LEFT JOIN young_animals y ON ya.name = d.name
+LEFT JOIN pack_animals p ON pa.id = d.animal_id
+UNION
+SELECT c.name, c.birthday, c.commands, ha.pet_name, y.age_in_month 
+FROM cats c
+LEFT JOIN young_animals y ON y.name = c.name
+LEFT JOIN  ha ON ha.id = c.pet_id
+UNION
+SELECT d.name, d.birthday, d.commands, ha.pet_name, y.age_in_month 
+FROM dogs d
+LEFT JOIN young_animals y ON y.name = d.name
+LEFT JOIN pets ha ON ha.id = d.pet_id
+UNION
+SELECT hm.name, hm.birthday, hm.commands, ha.pet_name, y.age_in_month 
+FROM hamsters hm
+LEFT JOIN young_animal y ON y.name = hm.name
+LEFT JOIN pets ha ON ha.id = hm.pet_id;
+
+```
+11. Написать программу, имитирующую работу реестра домашних животных. В программе должен быть реализован следующий функционал:
+11.1 Завести новое животное
+11.2 определять животное в правильный класс
+11.3 увидеть список команд, которое выполняет животное
+11.4 обучить животное новым командам
+11.5 Реализовать навигацию по меню
 
