@@ -32,7 +32,7 @@ public class Main {
         list2.add("Ноо!");
         animals.add(new Horse("Молния","12.07.2022", list2));
 
-        Presenter presenter = new Presenter ( new AnimalCollection(animals););
+        Presenter presenter = new Presenter ( new AnimalCollection(animals));
         presenter.run();
 
     }
