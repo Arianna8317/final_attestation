@@ -34,14 +34,14 @@ public class Presenter {
                         System.out.println("Имя животного, которого надо добавить : ");
                         String nameA = input.nextLine();
                         System.out.println(nameA);
-                        phoneBook.addAnimal(nameA);
-                        AnimalsView view2 = new AnimalsView(phoneBook);
+                        animals.addAnimal(nameA);
+                        AnimalsView view2 = new AnimalsView(animals));
                         view2.showAllAnimals();
                         break;
                     case 3:
                         System.out.println("Имя животного, которого надо удалить : ");
                         String nameD = input.nextLine();
-                        if (phoneBook.deleteAnimal(nameD)){
+                        if (animals.deleteAnimal(nameD)){
                             System.out.printf("Животное %s успешно удалено !", nameD);
                             AnimalsView view3 = new AnimalsView(animals);
                             view3.showAllAnimals();
@@ -51,7 +51,7 @@ public class Presenter {
                         System.out.println("Имя животного, которого надо найти : ");
                         String nameF = input.nextLine();
                         AnimalView view3 = new AnimalView(animals.findAnimal(nameF));
-                        view3.showAllAnimals();
+                        ///view3.showAllAnimals();
                         
                         break;   
                     case 0:

@@ -1,7 +1,6 @@
 package Animals.model;
 import java.util.*;
 
-import Animals.view.AnimalView;
 public class AnimalCollection {
 
     private List<Animal> animals;

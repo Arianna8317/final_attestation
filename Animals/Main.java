@@ -8,7 +8,7 @@ import Animals.model.Hamster;
 public class Main {
     public static void main(String[] args) {
         List<Animal> animals = new ArrayList<Animal>();
-        animals.add(new Dog("Рекс", "12.09.2010", "Ко мне!"));
+        animals.add(new Dog("Рекс", "12.09.2010", {"Ко мне!", "REE"}));
         animals.add(new Cat("Мурзик", "23.09.2022", "Кушать!"));
         animals.add(new Camel("Валя","12.09.2023", "Идти!"));
         animals.add(new Hamster("Луша", "12.09.2010", "Голос!"));
