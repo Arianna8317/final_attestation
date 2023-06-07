@@ -2,10 +2,10 @@ package Animals.model;
 import java.util.*;
 public class PackAnimal implements Animal{
     String name;
-    Date birthday;
+    String birthday;
     List<String> commands ; 
     String kind  = "";
-    public PackAnimal(String name, Date birthday, List<String> commands) {
+    public PackAnimal(String name, String birthday, List<String> commands) {
         this.name = name;
         this.birthday = birthday;
         this.commands = commands;

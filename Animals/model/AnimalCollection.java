@@ -26,6 +26,11 @@ public class AnimalCollection {
      
         this.animals.add(animal);
     };
+    public void addAnimal(String name){
+     
+    
+    };
+
 
     public Animal findAnimal(String name){
        

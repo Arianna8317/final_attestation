@@ -35,7 +35,7 @@ public class Presenter {
                         String nameA = input.nextLine();
                         System.out.println(nameA);
                         animals.addAnimal(nameA);
-                        AnimalsView view2 = new AnimalsView(animals));
+                        AnimalsView view2 = new AnimalsView(animals);
                         view2.showAllAnimals();
                         break;
                     case 3:
